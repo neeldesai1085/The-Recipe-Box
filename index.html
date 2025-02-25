@@ -1,0 +1,144 @@
+<!-- This is the landing page of the Website -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Recipe Box</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="author" content="Neel Desai">
+    <meta name="description" content="Discover a world of delicious recipes with The Recipe Box! Browse through easy-to-make meals, detailed instructions, and stunning visuals. Start cooking today!">
+</head>
+<body>
+    <a href="#main-div" class="skip-link" aria-label="Skip to main content">Skip to Main Content</a>
+    <header id="header-div" role="banner">
+        <div id="header-left">
+            <a href="index.html" id="left-link">
+                <div id="logo">
+                    <img src="assets/logo.png" alt="The Recipe Box Logo">
+                </div>
+                <div id="name">The Recipe Box</div>
+            </a>
+        </div>
+        <nav id="header-right" role="navigation" aria-label="Main navigation">
+            <ul id="nav">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-div" role="main">
+        <section id="hero" aria-labelledby="title">
+            <h1 id="title">The Recipe Box</h1>
+            <p id="headline">Discover the Magic of The Recipe Box: Your New Favorite Recipes Inside!</p>
+            <a href="#recipes"><button type="button" id="explore">Explore Recipes</button></a>
+        </section>
+        <section id="filters" aria-labelledby="filter-desc">
+            <fieldset>
+                <legend>Filter Recipes</legend>
+                <div class="options">
+                    <div class="filter-options">
+                        <label for="all">All</label>
+                    </div>
+                    <div class="filter-options">
+                        <label for="breakfast">Breakfast</label>
+                    </div>
+                    <div class="filter-options">
+                        <label for="lunch">Lunch</label>
+                    </div>
+                    <div class="filter-options">
+                        <label for="dinner">Dinner</label>
+                    </div>
+                </div>
+            </fieldset>
+        </section>
+        <input type="radio" name="filters" id="all" checked class="hidden-radio">
+        <input type="radio" name="filters" id="breakfast" class="hidden-radio">
+        <input type="radio" name="filters" id="lunch" class="hidden-radio">
+        <input type="radio" name="filters" id="dinner" class="hidden-radio">
+        <section id="recipes" aria-label="Recipe Cards">
+            <article class="card breakfast" aria-label="Classic Pancakes Recipe">
+                <div class="card-img">
+                    <img src="assets/pancakes.jpg" alt="Stack of fluffy classic pancakes with syrup and butter">
+                </div>
+                <div class="card-disc">
+                    <div class="card-type">Breakfast</div>
+                    <h3 class="card-head">Classic Pancakes</h3>
+                    <p class="class-desc">Fluffy, golden pancakes made with simple ingredients, perfect for a lazy weekend breakfast.</p>
+                    <p class="prep-time">Preparation time: 10 minutes</p>
+                    <a href="classic-pancakes.html"><button type="button" class="read-more" aria-label="Read more about Classic Pancakes">Read More</button></a>
+                </div>
+            </article>
+            <article class="card lunch" aria-label="Grilled Chicken Salad Recipe">
+                <div class="card-img">
+                    <img src="assets/grilled-chicken-salad.jpg" alt="Grilled chicken salad with fresh greens and vinaigrette">
+                </div>
+                <div class="card-disc">
+                    <div class="card-type">Lunch</div>
+                    <h3 class="card-head">Grilled Chicken Salad</h3>
+                    <p class="class-desc">A light and satisfying salad featuring tender grilled chicken, fresh greens, and a zesty vinaigrette dressing.</p>
+                    <p class="prep-time">Preparation time: 20 minutes</p>
+                    <a href="grilled-chicken-salad.html"><button type="button" class="read-more" aria-label="Read more about Grilled Chicken Salad">Read More</button></a>
+                </div>
+            </article>
+            <article class="card dinner" aria-label="Spaghetti Bolognese Recipe">
+                <div class="card-img">
+                    <img src="assets/spaghetti.jpg" alt="Plate of spaghetti bolognese with parmesan cheese">
+                </div>
+                <div class="card-disc">
+                    <div class="card-type">Dinner</div>
+                    <h3 class="card-head">Spaghetti Bolognese</h3>
+                    <p class="class-desc">Classic Italian spaghetti with rich, meaty Bolognese sauce and fresh parmesan.</p>
+                    <p class="prep-time">Preparation time: 30 minutes</p>
+                    <a href="spaghetti-bolognese.html"><button type="button" class="read-more" aria-label="Read more about Spaghetti Bolognese">Read More</button></a>
+                </div>
+            </article>
+            <article class="card breakfast" aria-label="Avocado Toast Recipe">
+                <div class="card-img">
+                    <img src="assets/avocado-toast.jpg" alt="Avocado toast with cherry tomatoes and chili flakes">
+                </div>
+                <div class="card-disc">
+                    <div class="card-type">Breakfast</div>
+                    <h3 class="card-head">Avocado Toast</h3>
+                    <p class="class-desc">Crispy sourdough topped with creamy avocado, cherry tomatoes, and a sprinkle of chili flakes.</p>
+                    <p class="prep-time">Preparation time: 5 minutes</p>
+                    <a href="avocado-toast.html"><button type="button" class="read-more" aria-label="Read more about Avocado Toast">Read More</button></a>
+                </div>
+            </article>
+            <article class="card lunch" aria-label="Veggie Wrap Recipe">
+                <div class="card-img">
+                    <img src="assets/veggie-wrap.jpg" alt="Whole wheat veggie wrap with hummus and greens">
+                </div>
+                <div class="card-disc">
+                    <div class="card-type">Lunch</div>
+                    <h3 class="card-head">Veggie Wrap</h3>
+                    <p class="class-desc">A healthy whole-wheat wrap loaded with fresh vegetables, hummus, and a touch of lemon.</p>
+                    <p class="prep-time">Preparation time: 15 minutes</p>
+                    <a href="veggie-wrap.html"><button type="button" class="read-more" aria-label="Read more about Veggie Wrap">Read More</button></a>
+                </div>
+            </article>
+            <article class="card dinner" aria-label="Teriyaki Salmon Recipe">
+                <div class="card-img">
+                    <img src="assets/teriyaki-salmon.jpg" alt="Teriyaki salmon with broccoli and rice">
+                </div>
+                <div class="card-disc">
+                    <div class="card-type">Dinner</div>
+                    <h3 class="card-head">Teriyaki Salmon</h3>
+                    <p class="class-desc">Glazed salmon fillet with teriyaki sauce, served with steamed broccoli and rice.</p>
+                    <p class="prep-time">Preparation time: 25 minutes</p>
+                    <a href="teriyaki-salmon.html"><button type="button" class="read-more" aria-label="Read more about Teriyaki Salmon">Read More</button></a>
+                </div>
+            </article>
+        </section>       
+    </main>
+    <footer id="footer-div" role="contentinfo">
+        <p>&copy; 2025 The Recipe Box. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,357 @@
+:root {
+    --background-color: #fff7f1;
+    --highlight-color: #8a4f7d;
+    --card-color: #ffd1ba;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    background-color: var(--background-color);
+}
+
+#header-div {
+    background-color: var(--highlight-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+@media (max-width: 1000px) {
+    #header-div {
+        justify-content: center;
+    }
+}
+
+#header-left {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    padding: 0 20px;
+}
+
+#logo img {
+    height: 50px;
+    width: 50px;
+}
+
+#name {
+    padding: 1px 20px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: whitesmoke;
+    border-left: 5px solid whitesmoke;
+}
+
+#left-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#left-link:hover {
+    opacity: 0.6;
+}
+
+
+#header-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+#nav li {
+    display: flex;
+    justify-content: center;
+}
+#nav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: whitesmoke;
+    border: 3px solid whitesmoke;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+#nav li a:hover {
+    background-color: whitesmoke;
+    color: var(--highlight-color)
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background-color: #0078d4;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 1rem;
+    z-index: 1000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 10px;
+    outline: 2px solid #ff0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#main-div {
+    padding: 3%;
+}
+
+#hero {
+    position: relative;
+    color: white;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+    border: 10px inset var(--highlight-color);
+    gap: 50px;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('assets/hero-background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+#hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+#title {
+    font-size: 4rem;
+}
+
+#headline {
+    font-size: 1.5rem;
+}
+
+#explore {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 15px 30px;
+    border-radius: 20px;
+    background-color: var(--card-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: ease-in 0.2s;
+}
+
+@media (max-width: 550px) {
+    #title {
+        font-size: 2.5rem;
+    }
+    #headline {
+        font-size: 0.9375rem;
+    }
+    #explore {
+        padding: 9.375px 18.75px;
+        font-size: 0.9375rem;
+    }
+}
+
+#explore:hover {
+    top: -1px;
+    left: -1px;
+    box-shadow: 2px 2px 5px black;
+}
+
+#filters {
+    padding: 20px 0;
+}
+
+legend {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    padding: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#recipes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.card {
+    background-color: var(--card-color);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-disc {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.card-type {
+    font-size: 1rem;
+    color: var(--highlight-color);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-head {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.class-desc {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.prep-time {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--highlight-color);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #6a3b5c;
+}
+
+input {
+    display: none;
+}
+
+label {
+    padding: 20px;
+    border: 2px solid var(--highlight-color);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+label:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 2px 2px 5px grey;
+}
+
+#footer-div {
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--highlight-color);
+    color: whitesmoke;
+    margin-top: 30px;
+}
+
+.hidden-radio {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#recipes .card {
+    display: block;
+}
+
+#breakfast:checked ~ #recipes .card:not(.breakfast),
+#lunch:checked ~ #recipes .card:not(.lunch),
+#dinner:checked ~ #recipes .card:not(.dinner) {
+    display: none;
+}
+
+#all:checked ~ #recipes .card {
+    display: block;
+}
