@@ -22,11 +22,8 @@ html {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+    padding: 10px 20px;
     flex-wrap: wrap;
-    position: sticky;
-    top: 0;
-    z-index: 10000;
 }
 
 @media (max-width: 1000px) {
@@ -234,6 +231,19 @@ fieldset {
     flex-wrap: wrap;
 }
 
+.filter-options {
+    padding: 20px;
+    border: 2px solid var(--highlight-color);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.filter-options:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 2px 2px 5px grey;
+}
+
 #recipes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -312,19 +322,6 @@ fieldset {
 
 input {
     display: none;
-}
-
-label {
-    padding: 20px;
-    border: 2px solid var(--highlight-color);
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-label:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 2px 2px 5px grey;
 }
 
 #footer-div {
